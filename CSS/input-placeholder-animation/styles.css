@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+.wrapper{
+    min-height: 100vh ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    position: relative;
+}
+
+.text{
+    width: 300px;
+    height: 35px;
+    margin-top: 25px;
+    padding: 0 15px;
+
+    border: 2px solid gray;
+    border-radius: 5px;
+    outline: none;
+
+    transform-origin: top left;
+
+    font-size: 1rem;
+}   
+
+.placeholder{
+    position: absolute;
+    top: 35px;
+    left: 15px;
+    transition: 0.3s all;
+}
+
+.text:focus + .placeholder, 
+.text:not(:placeholder-shown) + .placeholder {
+    top: 15px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    padding: 0 5px;
+
+    transition: 0.3s all;
+}
